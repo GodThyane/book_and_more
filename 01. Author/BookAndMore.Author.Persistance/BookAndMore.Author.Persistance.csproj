@@ -23,6 +23,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\BookAndMore.Commons.Persistance\BookAndMore.Commons.Persistance.csproj" />
+      <ProjectReference Include="..\..\Commons\BookAndMore.Commons.Persistance\BookAndMore.Commons.Persistance.csproj" />
       <ProjectReference Include="..\BookAndMore.Author.Application\BookAndMore.Author.Application.csproj" />
       <ProjectReference Include="..\BookAndMore.Author.Domain\BookAndMore.Author.Domain.csproj" />
     </ItemGroup>
