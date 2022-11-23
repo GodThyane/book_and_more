@@ -1,4 +1,4 @@
-﻿namespace BookAndMore.Author.Application.DTO;
+﻿namespace BookAndMore.Book.Proxy.Author.DTO;
 
 public class AuthorBaseDto
 {
@@ -7,10 +7,4 @@ public class AuthorBaseDto
     public string LastName { get; set; } = string.Empty;
     public string? ImageUrl { get; set; }
     public DateTime? BirthDate { get; set; }
-}
-
-
-public class AuthorDto : AuthorBaseDto
-{
-    public string? Biography { get; set; }
 }

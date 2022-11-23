@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using BookAndMore.Author.Application.Exceptions;
 using BookAndMore.Author.Application.Repositories;
 using BookAndMore.Author.Application.Services;
+using BookAndMore.Commons.Application.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookAndMore.Author.Infrastructure.Services;

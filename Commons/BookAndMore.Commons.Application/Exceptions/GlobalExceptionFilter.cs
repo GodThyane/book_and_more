@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace BookAndMore.Author.Application.Exceptions;
+namespace BookAndMore.Commons.Application.Exceptions;
 
 public class GlobalExceptionFilter : IExceptionFilter
 {

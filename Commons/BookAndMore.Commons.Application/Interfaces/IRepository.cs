@@ -5,7 +5,6 @@ namespace BookAndMore.Commons.Application.Interfaces;
 public interface IRepository<TEntity, TId> where TEntity : DatabaseObj<TId>
 {
     Task<TEntity?> GetByIdAsync(TId id);
-    
     TEntity? GetById(TId id);
     Task<IQueryable<TEntity>> GetAllAsync();
     Task AddAsync(TEntity entity);

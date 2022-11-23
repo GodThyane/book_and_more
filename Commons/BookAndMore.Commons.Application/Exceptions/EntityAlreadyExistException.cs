@@ -1,4 +1,4 @@
-﻿namespace BookAndMore.Author.Application.Exceptions;
+﻿namespace BookAndMore.Commons.Application.Exceptions;
 public class EntityAlreadyExistException : EntityNotFoundException
 {
     
