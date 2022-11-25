@@ -1,0 +1,95 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/v1/Book",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5158
+        }
+      ],
+      "UpstreamPathTemplate": "/Book",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "SwaggerKey": "books"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Book/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5158
+        }
+      ],
+      "UpstreamPathTemplate": "/Book/{id}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "DELETE"
+      ],
+      "DelegatingHandlers": [
+        "BookHandler"
+      ],
+      "SwaggerKey": "books"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Author",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5220
+        }
+      ],
+      "UpstreamPathTemplate": "/Author",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "SwaggerKey": "authors"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Author/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5220
+        }
+      ],
+      "UpstreamPathTemplate": "/Author/{id}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "DELETE"
+      ],
+      "SwaggerKey": "authors"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "books",
+      "Config": [
+        {
+          "Name": "Books API",
+          "Version": "v1",
+          "Url": "http://localhost:5158/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "authors",
+      "Config": [
+        {
+          "Name": "Authors API",
+          "Version": "v1",
+          "Url": "http://localhost:5220/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

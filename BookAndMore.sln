@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookAndMore.Book.Persistenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookAndMore.Book.Proxy", "02. Book\BookAndMore.Book.Proxy\BookAndMore.Book.Proxy.csproj", "{334608FC-A4FA-417D-A2D2-BB575E7A4604}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{FEBD9B63-569D-4203-A814-7AC841DE97E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookAndMore.Gateway.Api", "Gateway\BookAndMore.Gateway.Api\BookAndMore.Gateway.Api.csproj", "{4D419A54-D3AD-44F7-ADE5-172C65B5B538}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +58,7 @@ Global
 		{D63D4978-AB9D-486F-9BCA-427A74E952F0} = {C7DAF9BD-C29B-41AF-AC0C-3E4D7B21495B}
 		{E52CC0F1-73B7-48CF-8BFD-32AABFBCADEA} = {C7DAF9BD-C29B-41AF-AC0C-3E4D7B21495B}
 		{334608FC-A4FA-417D-A2D2-BB575E7A4604} = {C7DAF9BD-C29B-41AF-AC0C-3E4D7B21495B}
+		{4D419A54-D3AD-44F7-ADE5-172C65B5B538} = {FEBD9B63-569D-4203-A814-7AC841DE97E3}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1CDA06E6-5D32-4DCA-91BE-EF5961611A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -112,5 +117,9 @@ Global
 		{334608FC-A4FA-417D-A2D2-BB575E7A4604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{334608FC-A4FA-417D-A2D2-BB575E7A4604}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{334608FC-A4FA-417D-A2D2-BB575E7A4604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D419A54-D3AD-44F7-ADE5-172C65B5B538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D419A54-D3AD-44F7-ADE5-172C65B5B538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D419A54-D3AD-44F7-ADE5-172C65B5B538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D419A54-D3AD-44F7-ADE5-172C65B5B538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
