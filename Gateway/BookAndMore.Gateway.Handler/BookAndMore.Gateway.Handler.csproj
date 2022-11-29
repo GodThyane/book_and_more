@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Bus\BookAndMore.Bus.RabbitMQ\BookAndMore.Bus.RabbitMQ.csproj" />
+      <ProjectReference Include="..\BookAndMore.Gateway.Remote\BookAndMore.Gateway.Remote.csproj" />
+    </ItemGroup>
+
+</Project>

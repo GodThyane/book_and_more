@@ -12,9 +12,24 @@
       "UpstreamPathTemplate": "/Book",
       "UpstreamHttpMethod": [
         "GET",
-        "POST",
         "PUT"
       ],
+      "SwaggerKey": "books"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Book",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5158
+        }
+      ],
+      "UpstreamPathTemplate": "/Book",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DelegatingHandlers": ["BookHandler"],
       "SwaggerKey": "books"
     },
     {
@@ -30,9 +45,6 @@
       "UpstreamHttpMethod": [
         "GET",
         "DELETE"
-      ],
-      "DelegatingHandlers": [
-        "BookHandler"
       ],
       "SwaggerKey": "books"
     },
