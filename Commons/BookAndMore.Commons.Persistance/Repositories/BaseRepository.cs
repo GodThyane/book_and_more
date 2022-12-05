@@ -8,36 +8,36 @@ public class BaseRepository<TEntity, TContext, TId> : IRepository<TEntity, TId> 
 where TContext: DbContext
 {
     
-    private readonly DbSet<TEntity> _entities;
+    protected readonly DbSet<TEntity> Entities;
     private readonly TContext _context;
     public BaseRepository(TContext context)
     {
         _context = context;
-        _entities = context.Set<TEntity>();
+        Entities = context.Set<TEntity>();
     }
 
     public Task<TEntity?> GetByIdAsync(TId id)
-    => _entities.SingleOrDefaultAsync(e => e.Id!.Equals(id));
+    => Entities.SingleOrDefaultAsync(e => e.Id!.Equals(id));
 
     public TEntity? GetById(TId id)
-    => _entities.SingleOrDefault(e => e.Id!.Equals(id));
+    => Entities.SingleOrDefault(e => e.Id!.Equals(id));
 
     public Task<IQueryable<TEntity>> GetAllAsync()
-    => Task.FromResult(_entities.AsQueryable());
+    => Task.FromResult(Entities.AsQueryable());
 
     public async Task AddAsync(TEntity entity)
-    => await _entities.AddAsync(entity);
+    => await Entities.AddAsync(entity);
 
     public void Add(TEntity entity)
-    => _entities.Add(entity);
+    => Entities.Add(entity);
 
     public void Update(TEntity entity)
     {
-        _entities.Update(entity);
+        Entities.Update(entity);
     }
 
     public void Delete(TEntity entity)
-    => _entities.Remove(entity);
+    => Entities.Remove(entity);
 
     public Task SaveChangesAsync()
     => _context.SaveChangesAsync();

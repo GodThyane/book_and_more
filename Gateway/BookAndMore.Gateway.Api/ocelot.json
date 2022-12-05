@@ -80,6 +80,39 @@
         "DELETE"
       ],
       "SwaggerKey": "authors"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/ShoppingCart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5097
+        }
+      ],
+      "UpstreamPathTemplate": "/ShoppingCart",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "SwaggerKey": "shopping_carts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/ShoppingCart/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5097
+        }
+      ],
+      "UpstreamPathTemplate": "/ShoppingCart/{id}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "DELETE"
+      ],
+      "SwaggerKey": "shopping_carts"
     }
   ],
   "SwaggerEndPoints": [
@@ -100,6 +133,16 @@
           "Name": "Authors API",
           "Version": "v1",
           "Url": "http://localhost:5220/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "shopping_carts",
+      "Config": [
+        {
+          "Name": "Shopping Cart API",
+          "Version": "v1",
+          "Url": "http://localhost:5097/swagger/v1/swagger.json"
         }
       ]
     }
