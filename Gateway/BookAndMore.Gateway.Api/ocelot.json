@@ -1,6 +1,65 @@
 {
   "Routes": [
     {
+      "DownstreamPathTemplate": "/api/v1/Account/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5280
+        }
+      ],
+      "UpstreamPathTemplate": "/Account/Register",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "SwaggerKey": "accounts",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Account/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5280
+        }
+      ],
+      "UpstreamPathTemplate": "/Account/Login",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "SwaggerKey": "accounts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Role",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5280
+        }
+      ],
+      "UpstreamPathTemplate": "/Role",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "SwaggerKey": "accounts",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
+    },
+    {
       "DownstreamPathTemplate": "/api/v1/Book",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -14,7 +73,14 @@
         "GET",
         "PUT"
       ],
-      "SwaggerKey": "books"
+      "SwaggerKey": "books",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "invitado,admin"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/v1/Book",
@@ -30,7 +96,14 @@
         "POST"
       ],
       "DelegatingHandlers": ["BookHandler"],
-      "SwaggerKey": "books"
+      "SwaggerKey": "books",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/v1/Book/{id}",
@@ -46,7 +119,14 @@
         "GET",
         "DELETE"
       ],
-      "SwaggerKey": "books"
+      "SwaggerKey": "books",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin,invitado"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/v1/Author",
@@ -60,10 +140,38 @@
       "UpstreamPathTemplate": "/Author",
       "UpstreamHttpMethod": [
         "GET",
-        "POST",
         "PUT"
       ],
-      "SwaggerKey": "authors"
+      "SwaggerKey": "authors",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin,invitado"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Author",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5220
+        }
+      ],
+      "UpstreamPathTemplate": "/Author",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "SwaggerKey": "authors",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/v1/Author/{id}",
@@ -79,7 +187,14 @@
         "GET",
         "DELETE"
       ],
-      "SwaggerKey": "authors"
+      "SwaggerKey": "authors",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin,invitado"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/v1/ShoppingCart",
@@ -93,10 +208,38 @@
       "UpstreamPathTemplate": "/ShoppingCart",
       "UpstreamHttpMethod": [
         "GET",
-        "POST",
         "PUT"
       ],
-      "SwaggerKey": "shopping_carts"
+      "SwaggerKey": "shopping_carts",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/ShoppingCart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5097
+        }
+      ],
+      "UpstreamPathTemplate": "/ShoppingCart",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "SwaggerKey": "shopping_carts",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin,invitado"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/v1/ShoppingCart/{id}",
@@ -112,10 +255,27 @@
         "GET",
         "DELETE"
       ],
-      "SwaggerKey": "shopping_carts"
+      "SwaggerKey": "shopping_carts",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "admin,invitado"
+      }
     }
   ],
   "SwaggerEndPoints": [
+    {
+      "Key": "accounts",
+      "Config": [
+        {
+          "Name": "Account API",
+          "Version": "v1",
+          "Url": "http://localhost:5280/swagger/v1/swagger.json"
+        }
+      ]
+    },
     {
       "Key": "books",
       "Config": [
