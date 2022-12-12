@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:37378",
+      "applicationUrl": "http://localhost:61401",
       "sslPort": 0
     }
   },
   "profiles": {
-    "BookAndMore.Gateway.Api": {
+    "BookAndMore.Authentication.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5169",
+      "applicationUrl": "http://localhost:5280",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "JWT_KEY":"aPsk34dsafJWISksoqasdKXZOASDKWO3"
